@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.4.1)
 
-project("hello-world" C)
+project("hello-world-pack" C)
 
 #add subdirectory, so they will be build before this
 add_subdirectory("hello-pack")
@@ -14,7 +14,7 @@ target_include_directories("${PROJECT_NAME}" PRIVATE "include")
 target_include_directories("${PROJECT_NAME}" PRIVATE "hello-pack/include")
 
 #to create links for linker use link libraires
-target_link_libraries("${PROJECT_NAME}" "hello-func")
+target_link_libraries("${PROJECT_NAME}" "hello-pack")
 
 #we need to tell cmake where this link libs will be found using:
 target_link_directories("${PROJECT_NAME}" PRIVATE "hello-pack")
